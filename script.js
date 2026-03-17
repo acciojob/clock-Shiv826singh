@@ -1,18 +1,19 @@
-//your JS code here. If required.
-function updateTime() {
-    const timer = document.getElementById("timer");
+document.addEventListener("DOMContentLoaded", function () {
 
-    const now = new Date();
+    function updateTime() {
+        const timer = document.getElementById("timer");
 
-    // Format: M/D/YYYY, H:MM:SS AM/PM
-    const date = now.toLocaleDateString();
-    const time = now.toLocaleTimeString();
+        const now = new Date();
+        const date = now.toLocaleDateString();
+        const time = now.toLocaleTimeString();
 
-    timer.textContent = date + ", " + time;
-}
+        timer.textContent = date + ", " + time;
+    }
 
-// Run immediately
-updateTime();
+    // Run immediately
+    updateTime();
 
-// Update every second
-setInterval(updateTime, 1000);
+    // Update every second
+    setInterval(updateTime, 1000);
+
+});
